@@ -1,0 +1,34 @@
+# heizungjob.ch
+
+> Die spezialisierte Jobbörse für Heizungs-Fachkräfte in der Schweiz.
+
+heizungjob.ch ist eine Nischen-Jobbörse für die Schweizer Heizungs- und HLKS-Branche. Die Plattform richtet sich an Heizungsinstallateure, Servicemonteure Heizung, Wärmepumpen-Spezialisten, Projektleiter HLKS, Heizungsplaner, Kältetechniker, Heizungsmonteure, Gebäudetechniker HLKS, Feuerungskontrolleure, Anlagenmechaniker SHK, Bauleiter HLKS und Betriebstechniker Heizung.
+
+## Wichtige Seiten
+
+- [Startseite](https://heizungjob.ch/): Jobsuche mit Filtern nach Beruf, Ort, Umkreis, Pensum
+- [Heizungsinstallateur EFZ Jobs Zürich](https://heizungjob.ch/heizungjobs/heizungsinstallateur-efz/zh): Beispiel-Landingpage
+- [Sitemap](https://heizungjob.ch/sitemap.xml): Alle verfügbaren Seiten
+
+## Kerninformationen
+
+- **Sprache**: Deutsch (Schweizer Markt)
+- **Regionen**: Alle Schweizer Kantone — Zürich, Bern, Basel, Aargau, St. Gallen, Luzern, Solothurn, Zug und weitere
+- **Berufe**: Heizungsinstallateur EFZ, Servicemonteur Heizung, Wärmepumpen-Spezialist, Projektleiter HLKS, Heizungsplaner, Kältetechniker, Heizungsmonteur, Gebäudetechniker HLKS, Feuerungskontrolleur, Anlagenmechaniker SHK, Bauleiter HLKS, Betriebstechniker Heizung
+- **Lohndaten (Richtwerte, CHF/Jahr)**:
+  - Bauleiter HLKS: 90'000 – 120'000
+  - Projektleiter HLKS: 85'000 – 110'000
+  - Heizungsplaner: 78'000 – 98'000
+  - Wärmepumpen-Spezialist: 75'000 – 95'000
+  - Kältetechniker: 72'000 – 92'000
+  - Heizungsinstallateur EFZ: 72'000 – 90'000
+  - Betriebstechniker Heizung: 72'000 – 90'000
+  - Servicemonteur Heizung: 70'000 – 88'000
+  - Anlagenmechaniker SHK: 70'000 – 88'000
+  - Feuerungskontrolleur: 68'000 – 85'000
+  - Heizungsmonteur: 68'000 – 82'000
+
+## Kontakt
+
+- **Website**: https://heizungjob.ch
+- **Branche**: Personalvermittlung / Jobbörse — Heizungs- und HLKS-Branche Schweiz
