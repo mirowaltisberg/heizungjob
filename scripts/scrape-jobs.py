@@ -243,7 +243,9 @@ RELEVANT_TITLE_KEYWORDS = [
     "field service",
     "bauleiter",
     "polier",
+    "vorarbeiter",
     "projektleiter",
+    "planer",
     "techniker",
     "fachmann",
     "fachfrau",
@@ -257,6 +259,11 @@ RELEVANT_TITLE_KEYWORDS = [
     "rohrleitungsbau",
     "anlagenmech",
     "anlagenbau",
+    "gas",
+    "wasser",
+    "energietechni",
+    "energieber",
+    "gebäudeautomation",
 ]
 
 # Titles containing any of these are always rejected
@@ -432,6 +439,23 @@ DEFAULT_SEARCH_TERMS = [
     "Fernwärme",
     "Ölbrenner Techniker",
     "Kaminfeger",
+    "Gebäudetechnik",
+    "Haustechnik",
+    "Servicetechniker Gebäudetechnik",
+    "Anlagenmechaniker",
+    "Installateur",
+    "HLKS Monteur",
+    "Sanitärinstallateur",
+    "Lüftungsmonteur",
+    "Energietechnik",
+    "Heizung Lüftung Klima",
+    "Kältetechniker",
+    "Servicemonteur",
+    "Bauleiter Haustechnik",
+    "Projektleiter Gebäudetechnik",
+    "Solar Thermie",
+    "Gas Wasser Installateur",
+    "Rohrleitungsbauer",
 ]
 
 DEFAULT_LOCATIONS = [
@@ -447,6 +471,14 @@ DEFAULT_LOCATIONS = [
     "Lugano, Schweiz",
     "Chur, Schweiz",
     "Sion, Schweiz",
+    "Olten, Schweiz",
+    "Thun, Schweiz",
+    "Frauenfeld, Schweiz",
+    "Zug, Schweiz",
+    "Schaffhausen, Schweiz",
+    "Solothurn, Schweiz",
+    "Rapperswil, Schweiz",
+    "Baden, Schweiz",
 ]
 
 
@@ -746,7 +778,7 @@ def main():
     parser = argparse.ArgumentParser(description="Scrape Swiss electrical jobs")
     parser.add_argument("--query", type=str, help="Single search query")
     parser.add_argument("--location", type=str, help="Single location")
-    parser.add_argument("--results", type=int, default=100, help="Results per query/location combo")
+    parser.add_argument("--results", type=int, default=50, help="Results per query/location combo")
     parser.add_argument("--quick", action="store_true", help="Quick mode: single query only")
     parser.add_argument("--chunk", type=int, default=0, help="Chunk index (0-based) for splitting search terms")
     parser.add_argument("--total-chunks", type=int, default=1, help="Total number of chunks to split search terms into")
