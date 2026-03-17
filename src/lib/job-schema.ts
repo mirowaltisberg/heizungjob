@@ -42,7 +42,7 @@ export function buildJobPostingSchema(job: JobListing) {
     industry: "Heizung, Lüftung, Klima & Sanitär",
     hiringOrganization: {
       "@type": "Organization",
-      name: job.company,
+      name: job.company?.trim() || "Arbeitgeber auf heizungjob.ch",
       ...(job.companyUrl ? { sameAs: job.companyUrl } : {}),
     },
     jobLocation: {
