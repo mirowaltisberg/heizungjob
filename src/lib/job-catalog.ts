@@ -37,30 +37,22 @@ const COUNTRY_WIDE_LOCATIONS = new Set([
 const coordinateCache = new Map<string, Coordinate | null>();
 
 const POSITIVE_KEYWORDS = [
-  "elektro",
-  "elektriker",
-  "montage-elektriker",
-  "elektroinstallateur",
-  "automatiker",
-  "elektroplaner",
-  "netzelektriker",
-  "elektromonteur",
-  "elektrotechnik",
-  "starkstrom",
-  "schwachstrom",
-  "schaltanlagen",
-  "gebäudeautomation",
-  "photovoltaik",
-  "solartechnik",
+  "heizung",
+  "heizungsinstallateur",
+  "heizungsmonteur",
+  "heizungstechniker",
+  "heizungsmeister",
+  "wärmepumpe",
+  "waermepumpe",
+  "fernwärme",
+  "fernwaerme",
+  "solarthermie",
+  "heizkörper",
+  "heizkessel",
+  "heizungsanlage",
+  "heizungsplaner",
   "inbetriebnahme",
   "servicetechniker",
-  "heizung",
-  "lüftung",
-  "klima",
-  "sanitär",
-  "gebäudetechnik",
-  "haustechnik",
-  "brandschutz",
   "monteur",
   "installat",
   "wartung",
@@ -84,59 +76,29 @@ const NEGATIVE_KEYWORDS = [
 ];
 
 const CORE_TITLE_KEYWORDS = [
-  "elektro",
-  "elektriker",
-  "elektroinstallateur",
-  "montage-elektriker",
-  "elektromonteur",
-  "elektroniker",
-  "automatiker",
-  "automatikmonteur",
-  "automation",
-  "instandhalt",
-  "inbetriebnahme",
-  "betriebselektriker",
-  "schaltanlagen",
-  "schaltschrank",
-  "gebäudeautomation",
-  "gebaeudeautomation",
-  "photovoltaik",
-  "solartechnik",
-  "netzelektriker",
-  "bahntechnik",
-  "sps",
-  "msr",
-  "mess regel",
-  "mechatron",
+  "heizung",
+  "heizungsinstallateur",
+  "heizungsmonteur",
+  "heizungstechniker",
+  "heizungsmeister",
+  "wärmepumpe",
+  "waermepumpe",
+  "fernwärme",
+  "fernwaerme",
+  "solarthermie",
+  "heizkörper",
+  "heizkessel",
+  "heizungsanlage",
+  "heizungsplaner",
   "servicetechni",
   "kundendiensttechni",
-  "field service",
   "monteur",
   "techniker",
   "projektleiter",
   "bauleiter",
-  "heizung",
-  "lüftung",
-  "klima",
-  "kälte",
-  "sanitär",
-  "hlk",
-  "hkls",
-  "hvac",
-  "haustechnik",
-  "gebäudetechnik",
-  "brandschutz",
-  "brandmelde",
-  "freileitungs",
-  "starkstrom",
-  "schwachstrom",
+  "instandhalt",
+  "inbetriebnahme",
   "planer",
-  "zeichner",
-  "emr",
-  "energie",
-  "netz",
-  "trafo",
-  "spengler",
   "installat",
   "wartung",
 ];
@@ -166,6 +128,71 @@ const HARD_NEGATIVE_TITLE_KEYWORDS = [
   "data",
   "hr",
   "human resources",
+];
+
+/** Keywords that uniquely identify THIS trade (heizung) */
+const TRADE_IDENTITY_KEYWORDS = [
+  "heizung",
+  "heizungsinstallateur",
+  "heizungsmonteur",
+  "heizungstechniker",
+  "heizungsmeister",
+  "wärmepumpe",
+  "waermepumpe",
+  "fernwärme",
+  "fernwaerme",
+  "solarthermie",
+  "heizkörper",
+  "heizkessel",
+  "heizungsanlage",
+  "heizungsplaner",
+];
+
+/** Primary keywords from OTHER trades — reject if title matches these without any TRADE_IDENTITY match */
+const OTHER_TRADE_KEYWORDS = [
+  "elektro",
+  "elektriker",
+  "elektroinstallateur",
+  "elektromonteur",
+  "elektroniker",
+  "automatiker",
+  "schaltanlagen",
+  "photovoltaik",
+  "starkstrom",
+  "schwachstrom",
+  "sanitär",
+  "sanitaer",
+  "sanitärinstallateur",
+  "sanitärmonteur",
+  "klima",
+  "klimatechniker",
+  "kälte",
+  "kältetechniker",
+  "kälteanlagenbauer",
+  "lüftung",
+  "lüftungsmonteur",
+  "lüftungsanlagenbauer",
+  "spengler",
+  "bauspengler",
+  "dachdecker",
+  "dachdeckerin",
+  "zimmermann",
+  "holzbau",
+  "holzkonstruktion",
+  "schreiner",
+  "schreinerei",
+  "tischler",
+  "möbel",
+  "bodenleger",
+  "parkettleger",
+  "plattenleger",
+  "fliesen",
+  "gärtner",
+  "gaertner",
+  "garten",
+  "landschaftsgärtner",
+  "baumpflege",
+  "gartenbau",
 ];
 
 interface NormalizedParams {
@@ -229,10 +256,17 @@ function scoreScrapedJob(job: ScrapedJob): number {
     `${job.description} ${job.fullDescription} ${requirements.join(" ")} ${responsibilities.join(" ")}`
   );
 
+  const titleTradeIdentityHits = countKeywordHits(title, TRADE_IDENTITY_KEYWORDS);
+  const titleOtherTradeHits = countKeywordHits(title, OTHER_TRADE_KEYWORDS);
   const titleSignalHits = countKeywordHits(title, CORE_TITLE_KEYWORDS);
   const hardNegativeTitleHits = countKeywordHits(title, HARD_NEGATIVE_TITLE_KEYWORDS);
   const bodySignalHits = countKeywordHits(body, POSITIVE_KEYWORDS);
   const bodyNegativeHits = countKeywordHits(body, NEGATIVE_KEYWORDS);
+
+  // Title mentions another trade but NOT this trade → reject
+  if (titleOtherTradeHits > 0 && titleTradeIdentityHits === 0) {
+    return -100;
+  }
 
   if (hardNegativeTitleHits > 0 && titleSignalHits === 0) {
     return -100;
@@ -585,7 +619,7 @@ async function getSourceJobs(query: string, location: string): Promise<SourceBun
 
   // Always generate supplemental jobs so every search returns results
   const context = normalizeSearchInput(
-    query || "Elektroinstallateur",
+    query || "Heizungsinstallateur",
     location || "Schweiz"
   );
   const generated = generateFakeJobs({
