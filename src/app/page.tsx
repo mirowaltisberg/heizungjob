@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/json-ld";
 import { buildJobPostingSchema } from "@/lib/job-schema";
 
 export const metadata: Metadata = {
-  title: "Heizung Jobs Schweiz 2026 | Offene Stellen finden",
+  title: "712 Heizung Jobs Schweiz 2026 | Offene Stellen finden",
   description:
     "Finde aktuelle Heizung Jobs in der Schweiz. Stellen für Heizungsinstallateur EFZ, Servicemonteur Heizung, Wärmepumpen-Spezialist & mehr. Jetzt Lebenslauf einreichen.",
   alternates: { canonical: "/" },

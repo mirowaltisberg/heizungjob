@@ -19,7 +19,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.heizungjob.ch"
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Heizung Jobs Schweiz 2026 | Offene Stellen finden",
+    default: "712 Heizung Jobs Schweiz 2026 | Offene Stellen finden",
     template: "%s | heizungjob.ch",
   },
   description:
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "HLKS Jobs Schweiz",
   ],
   openGraph: {
-    title: "Heizung Jobs Schweiz 2026 | Offene Stellen finden",
+    title: "712 Heizung Jobs Schweiz 2026 | Offene Stellen finden",
     description:
       "Finde aktuelle Heizung Jobs in der Schweiz. Stellen für Heizungsinstallateur EFZ, Servicemonteur Heizung, Wärmepumpen-Spezialist & mehr. Jetzt Lebenslauf einreichen.",
     type: "website",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Heizung Jobs Schweiz 2026 | Offene Stellen finden",
+    title: "712 Heizung Jobs Schweiz 2026 | Offene Stellen finden",
     description:
       "Finde aktuelle Heizung Jobs in der Schweiz. Stellen für Heizungsinstallateur EFZ, Servicemonteur Heizung, Wärmepumpen-Spezialist & mehr. Jetzt Lebenslauf einreichen.",
   },
