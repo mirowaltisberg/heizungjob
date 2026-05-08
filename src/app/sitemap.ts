@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getIndexableJobListings } from "@/lib/job-catalog";
 import { getLandingPath, TOP_LANDING_PAGES } from "@/lib/landing-pages";
+import { HEIZUNG_CITIES } from "@/lib/heizung-cities";
 
 export const revalidate = 3600;
 
@@ -39,6 +40,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    {
+      url: toAbsolute("/lohn-heizungsinstallateur-schweiz"),
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
+    {
+      url: toAbsolute("/heizungsinstallateur-ausbildung"),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    },
+    {
+      url: toAbsolute("/heizung-in-der-naehe"),
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
+    },
+    ...HEIZUNG_CITIES.map((c) => ({
+      url: toAbsolute(`/heizungs-jobs/${c.slug}`),
+      lastModified: now,
+      changeFrequency: "daily" as const,
+      priority: 0.85,
+    })),
     ...TOP_LANDING_PAGES.map((page) => ({
       url: toAbsolute(getLandingPath(page)),
       lastModified: now,

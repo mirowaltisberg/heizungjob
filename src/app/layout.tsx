@@ -19,11 +19,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.heizungjob.ch"
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "712 Heizung Jobs Schweiz 2026 | Offene Stellen finden",
+    default: "Heizungsinstallateur Jobs Schweiz 2026 | Stellen, Lohn & Ausbildung",
     template: "%s | heizungjob.ch",
   },
   description:
-    "Finde aktuelle Heizung Jobs in der Schweiz. Stellen für Heizungsinstallateur EFZ, Servicemonteur Heizung, Wärmepumpen-Spezialist & mehr. Jetzt Lebenslauf einreichen.",
+    "Heizungsinstallateur Jobs Schweiz: Heizungsmonteur, Wärmepumpen-Techniker, Servicetechniker. Lohn, Ausbildung, GAV — täglich aktualisierte Stellen.",
   keywords: [
     "Heizungsjobs",
     "Heizungsjobs Schweiz",
