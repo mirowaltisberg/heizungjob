@@ -61,6 +61,36 @@ const CONTROLLED_ROLES: ControlledRole[] = [
     label: "Inbetriebnahmetechniker/in Heizung",
     aliases: ["inbetriebnahme", "regelungstechnik", "anlagenoptimierung"],
   },
+  {
+    key: "heizungspraktik",
+    label: "Heizungspraktiker/in EBA",
+    aliases: ["heizungspraktiker", "heizungspraktikerin", "eba"],
+  },
+  {
+    key: "heizungs-chefmontage",
+    label: "Chefmonteur/in Heizung",
+    aliases: ["chefmonteur", "chefmonteurin", "chefmontage"],
+  },
+  {
+    key: "heizungs-bauleitung",
+    label: "Bauleitende/r Heizungsinstallateur/in",
+    aliases: ["bauleitend", "bauleitung heizung", "bauleiter heizung"],
+  },
+  {
+    key: "heizungs-kundendienst",
+    label: "Kundendienstmonteur/in Heizung",
+    aliases: ["kundendienstmonteur", "kundendienstmonteurin", "kundendienst heizung"],
+  },
+  {
+    key: "heizungs-avor",
+    label: "AVOR-Sachbearbeiter/in Heizung",
+    aliases: ["avor", "sachbearbeiter heizung", "sachbearbeiterin heizung"],
+  },
+  {
+    key: "heizungs-kalkulation",
+    label: "Kalkulator/in Heizung",
+    aliases: ["kalkulator", "kalkulatorin", "kalkulation heizung"],
+  },
 ];
 
 const CONTROLLED_EMPLOYMENT_TYPES = new Map([
