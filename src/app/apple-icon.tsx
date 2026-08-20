@@ -13,7 +13,7 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#e74c3c",
+          background: "#20364f",
           borderRadius: "36px",
         }}
       >
@@ -23,10 +23,11 @@ export default function AppleIcon() {
           width="120"
           height="120"
         >
-          <path
-            d="M24 44c-7-4-12-11-12-19 0-6 3-12 7-17 1 5 4 9 8 11-1-8 3-16 9-22 0 8 3 14 7 18 3-2 5-6 5-10 3 5 4 10 4 15 0 10-7 19-16 22-1-3-2-7-2-10-3 4-7 8-10 12z"
-            fill="white"
-          />
+          <g fill="none" stroke="#edf3f8" strokeWidth="3" strokeLinecap="square">
+            <path d="M5 14h7v20H5M43 14h-7v20h7" />
+            <path d="M14 10v28M20.5 10v28M27 10v28M33.5 10v28" />
+          </g>
+          <circle cx="24" cy="24" r="3.5" fill="#d94a32" stroke="#20364f" strokeWidth="1.5" />
         </svg>
       </div>
     ),

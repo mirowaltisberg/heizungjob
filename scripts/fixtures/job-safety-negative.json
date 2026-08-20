@@ -1,0 +1,128 @@
+{
+  "jobs": [
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-840295e6f404",
+      "jobUrl": "https://jobs.example.ch/reject-1",
+      "source": "indeed",
+      "title": "Elektroinstallateur EFZ",
+      "description": "Der Betrieb führt neben Elektroarbeiten auch Heizungprojekte aus.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "REJECT"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-b9830013de12",
+      "jobUrl": "https://jobs.example.ch/reject-2",
+      "source": "google",
+      "title": "Projektleiter Gebäudetechnik",
+      "description": "Im Projekt geht es ausschliesslich um Heizunganlagen und Trinkwasser.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "REJECT"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-57265693ff45",
+      "jobUrl": "https://jobs.example.ch/review-1",
+      "source": "linkedin",
+      "title": "Heizungsinstallateur / Sanitärinstallateur",
+      "description": "Gemischte Funktion für Heizungs- und Sanitäranlagen.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "REVIEW"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-958b224d4fb5",
+      "jobUrl": "https://jobs.example.ch/reject-3",
+      "source": "indeed",
+      "title": "Pflegefachperson Heizungabteilung",
+      "description": "Pflege und Betreuung in einer medizinischen Einrichtung.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "REJECT"
+    },
+    {
+      "trade": "elektro",
+      "id": "scraped-heizung-fb418c1d08fd",
+      "jobUrl": "https://jobs.example.ch/wrong-trade",
+      "source": "indeed",
+      "title": "Heizungsinstallateur",
+      "description": "Heizungsinstallationen in Neu- und Umbauten.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "ACCEPT",
+      "expectedIdentityError": "wrong-trade"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-000000000000",
+      "jobUrl": "https://jobs.example.ch/id-mismatch",
+      "source": "indeed",
+      "title": "Heizungsmonteur",
+      "description": "Montage und Prüfung von Heizunganlagen.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "ACCEPT",
+      "expectedIdentityError": "id-url-mismatch"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-4fbd9d1ea600",
+      "jobUrl": "https://jobs.example.ch/generic-monteur",
+      "source": "indeed",
+      "title": "Monteur 100%",
+      "description": "Montage von Heizunganlagen und Trinkwasserleitungen.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "REJECT"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-863c496aa5f5",
+      "jobUrl": "https://jobs.example.ch/pipe-without-context",
+      "source": "google",
+      "title": "Rohrleitungsmonteur",
+      "description": "Rohrleitungsbau für industrielle Prozesse.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "REJECT"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-F146A51E95B4",
+      "jobUrl": "https://jobs.example.ch/uppercase-id",
+      "source": "linkedin",
+      "title": "Heizungsinstallateur",
+      "description": "Heizungsinstallationen in Neu- und Umbauten.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "ACCEPT",
+      "expectedIdentityError": "invalid-id"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-3fd524fd2f33",
+      "jobUrl": "https://jobs.example.ch/legacy-id",
+      "source": "indeed",
+      "title": "Heizungsinstallateur",
+      "description": "Heizungsinstallationen in Neu- und Umbauten.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "ACCEPT",
+      "expectedIdentityError": "invalid-id"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-d3f3b9dbf6d7",
+      "jobUrl": "https://jobs.example.ch/sanitary-sales",
+      "source": "indeed",
+      "title": "Verkaufsberater Bad und Heizung",
+      "description": "Beratung und Verkauf im Ausstellungsraum.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "REJECT"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-df770f64aed4",
+      "jobUrl": "https://jobs.example.ch/body-only-planer",
+      "source": "google",
+      "title": "Gebäudetechnikplaner",
+      "description": "Planung von Heizunganlagen.",
+      "datePosted": "$TODAY",
+      "expectedDisposition": "REJECT"
+    }
+  ]
+}

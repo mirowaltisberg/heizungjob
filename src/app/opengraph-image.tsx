@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "heizungjob.ch — Heizungsjobs Schweiz";
+export const alt = "heizungjob.ch — Heizungjobs Schweiz";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -13,25 +13,26 @@ export default function OgImage() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
+          alignItems: "flex-start",
+          justifyContent: "space-between",
+          padding: "72px 86px",
+          background: "#edf3f8",
+          borderTop: "18px solid #d94a32",
           fontFamily: "sans-serif",
         }}
       >
-        {/* Flame */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 48 48"
-          width="120"
-          height="120"
-          style={{ marginBottom: 32 }}
-        >
-          <path
-            d="M24 44c-7-4-12-11-12-19 0-6 3-12 7-17 1 5 4 9 8 11-1-8 3-16 9-22 0 8 3 14 7 18 3-2 5-6 5-10 3 5 4 10 4 15 0 10-7 19-16 22-1-3-2-7-2-10-3 4-7 8-10 12z"
-            fill="#e74c3c"
-          />
-        </svg>
+        <div style={{ display: "flex", alignItems: "center", gap: 26 }}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="90" height="90">
+            <g fill="none" stroke="#274a79" strokeWidth="3" strokeLinecap="square">
+              <path d="M5 14h7v20H5M43 14h-7v20h7" />
+              <path d="M14 10v28M20.5 10v28M27 10v28M33.5 10v28" />
+            </g>
+            <circle cx="24" cy="24" r="3.5" fill="#d94a32" stroke="#edf3f8" strokeWidth="1.5" />
+          </svg>
+          <div style={{ color: "#274a79", fontSize: 24, fontWeight: 800, letterSpacing: 3 }}>
+            HEIZUNG · SCHWEIZ
+          </div>
+        </div>
 
         {/* Brand name */}
         <div
@@ -41,13 +42,13 @@ export default function OgImage() {
             gap: 0,
           }}
         >
-          <span style={{ fontSize: 72, fontWeight: 900, color: "#f8fafc", letterSpacing: -1 }}>
-            Heizung
+          <span style={{ fontSize: 84, fontWeight: 900, color: "#20364f", letterSpacing: -4 }}>
+            heizung
           </span>
-          <span style={{ fontSize: 72, fontWeight: 900, color: "#e74c3c", letterSpacing: -1 }}>
+          <span style={{ fontSize: 84, fontWeight: 900, color: "#274a79", letterSpacing: -4 }}>
             job
           </span>
-          <span style={{ fontSize: 52, fontWeight: 400, color: "#94a3b8", letterSpacing: -1 }}>
+          <span style={{ fontSize: 58, fontWeight: 700, color: "#d94a32", letterSpacing: -2 }}>
             .ch
           </span>
         </div>
@@ -56,12 +57,12 @@ export default function OgImage() {
         <div
           style={{
             fontSize: 28,
-            color: "#94a3b8",
+            color: "#49647f",
             marginTop: 20,
             letterSpacing: 0.5,
           }}
         >
-          Die Jobbörse für Heizungs-Fachkräfte in der Schweiz
+          Wärme braucht Fachkräfte.
         </div>
       </div>
     ),

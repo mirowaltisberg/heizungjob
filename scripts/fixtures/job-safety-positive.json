@@ -1,0 +1,79 @@
+{
+  "jobs": [
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-380fad1900b3",
+      "jobUrl": "https://jobs.example.ch/heizung-installation",
+      "source": "indeed",
+      "title": "Heizungsinstallateur EFZ",
+      "company": "Thermoplan Beispiel AG",
+      "location": "Zürich, Zürich",
+      "type": "Vollzeit",
+      "workload": "100%",
+      "datePosted": "$TODAY",
+      "description": "Installation und Wartung von Heizunganlagen in Neu- und Umbauten in der Region Zürich.",
+      "expectedDisposition": "ACCEPT",
+      "expectedPublicTitle": "Heizungsinstallateur/in EFZ"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-c5de473f2827",
+      "jobUrl": "https://jobs.example.ch/heizung-project",
+      "source": "linkedin",
+      "title": "Projektleiter Heizung 80–100%",
+      "company": "Wärmeprojekt Muster GmbH",
+      "location": "Bern, Bern",
+      "type": "Festanstellung",
+      "workload": "80-100%",
+      "datePosted": "$TODAY",
+      "description": "Koordination von Heizungprojekten, Terminen und Fachpartnern vom Start bis zur Übergabe.",
+      "expectedDisposition": "ACCEPT",
+      "expectedPublicTitle": "Projektleiter/in Heizung"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-b7b40bc9edf8",
+      "jobUrl": "https://jobs.example.ch/heizung-commissioning",
+      "source": "google",
+      "title": "Inbetriebnahmetechniker Heizung",
+      "company": "Wärmeregelung Beispiel AG",
+      "location": "Basel, Basel-Stadt",
+      "type": "Vollzeit",
+      "workload": "100%",
+      "datePosted": "$TODAY",
+      "description": "Inbetriebnahme, Messung und Dokumentation von Heizungsanlagen und Regelungskomponenten.",
+      "expectedDisposition": "ACCEPT",
+      "expectedPublicTitle": "Inbetriebnahmetechniker/in Heizung"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-9a2b6a9f4b20",
+      "jobUrl": "https://jobs.example.ch/heizung-service",
+      "source": "indeed",
+      "title": "Servicetechniker Heizung",
+      "company": "Heizservice Muster AG",
+      "location": "Luzern, Luzern",
+      "type": "Vollzeit",
+      "workload": "80-100%",
+      "datePosted": "$TODAY",
+      "description": "Service, Unterhalt und Störungsbehebung an Heizunganlagen im zugeteilten Einsatzgebiet.",
+      "expectedDisposition": "ACCEPT",
+      "expectedPublicTitle": "Servicetechniker/in Heizung"
+    },
+    {
+      "trade": "heizung",
+      "id": "scraped-heizung-44d2a1336ce1",
+      "jobUrl": "https://jobs.example.ch/heizung-efz-token",
+      "source": "indeed",
+      "title": "Heizungsmonteur EFZPlus",
+      "company": "Wärmetest Beispiel AG",
+      "location": "Zug, Zug",
+      "type": "Vollzeit",
+      "workload": "100%",
+      "datePosted": "$TODAY",
+      "description": "Montage und Prüfung von Heizunganlagen in Neu- und Umbauten im Einsatzgebiet Zug.",
+      "expectedDisposition": "ACCEPT",
+      "expectedPublicTitle": "Heizungsinstallateur/in"
+    }
+  ]
+}
