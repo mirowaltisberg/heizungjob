@@ -50,6 +50,11 @@ const nextConfig: NextConfig = {
         destination: "/lohn-heizungsinstallateur-schweiz",
         permanent: true,
       },
+      {
+        source: "/heizung-jobs/:city",
+        destination: "/heizungs-jobs/:city",
+        permanent: true,
+      },
       ...cantonAliases.map(([from, to]) => ({
         source: `/heizungjobs/:role/${from}`,
         destination: `/heizungjobs/:role/${to}`,

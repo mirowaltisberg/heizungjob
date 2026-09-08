@@ -41,11 +41,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
-    alternates: { canonical: `/heizung-jobs/${city.slug}` },
+    alternates: { canonical: `/heizungs-jobs/${city.slug}` },
     openGraph: {
       title,
       description,
-      url: `/heizung-jobs/${city.slug}`,
+      url: `/heizungs-jobs/${city.slug}`,
       type: "website",
       locale: "de_CH",
     },
@@ -76,7 +76,7 @@ export default async function HeizungCityPage({ params }: PageProps) {
         "@type": "ListItem",
         position: 2,
         name: `Heizungsinstallateur Jobs ${city.name}`,
-        item: `${SITE_URL}/heizung-jobs/${city.slug}`,
+        item: `${SITE_URL}/heizungs-jobs/${city.slug}`,
       },
     ],
   };
@@ -211,7 +211,7 @@ export default async function HeizungCityPage({ params }: PageProps) {
             {HEIZUNG_CITIES.filter((item) => item.slug !== city.slug).map((item) => (
               <Link
                 key={item.slug}
-                href={`/heizung-jobs/${item.slug}`}
+                href={`/heizungs-jobs/${item.slug}`}
                 className="rounded-md border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-700 hover:border-primary/40 hover:text-primary transition"
               >
                 Heizungsinstallateur Jobs {item.name}
